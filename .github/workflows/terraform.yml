@@ -28,9 +28,8 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ffb68d98-b1e0-4bdf-a81f-f5c092db7bc3
-          tenant-id: 94267549-4226-4eb3-9b17-8225c6dd5a57
-          subscription-id: 4aa4d2ba-12df-4108-bf78-9a4446c9cef4
+          creds: '${{ secrets.PIPELINE }}'
+        
 
       - name: Terraform Init
         run: terraform init
