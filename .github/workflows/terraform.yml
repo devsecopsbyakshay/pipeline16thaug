@@ -14,10 +14,6 @@ jobs:
     name: Terraform Plan
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./pipeline16thaug
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
