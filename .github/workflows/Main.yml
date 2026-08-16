@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 permissions:
   contents: read
 
@@ -12,11 +14,6 @@ jobs:
   terraform-apply:
     name: Terraform Apply
     runs-on: ubuntu-latest
-
-    # Optional but recommended:
-    # GitHub Environment me manual approval configure kar sakte ho.
-    environment:
-      name: production
 
     steps:
       - name: Checkout
